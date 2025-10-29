@@ -2,11 +2,14 @@ extends CharacterBody2D
 
 class_name Player
 
+#points_scored: Emitted when Mario kills enemies or collects items.
+#castle_entered: Emitted when the player finishes a level.
 signal points_scored(points: int)
 signal castle_entered
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+# different player modes
 enum PlayerMode {
 	SMALL,
 	BIG,
@@ -16,11 +19,14 @@ enum PlayerMode {
 const PIPE_ENTER_THRESHOLD = 10
 
 #On ready
+# Preloads reusable scenes like fireballs, points labels, and collision shapes.
 const POINTS_LABEL_SCENE = preload("res://Scenes/points_label.tscn")
 const SMALL_MARIO_COLLISION_SHAPE = preload("res://Resources/CollisionShapes/small_mario_collision_shape.tres")
 const BIG_MARIO_COLLISION_SHAPE = preload("res://Resources/CollisionShapes/big_mario_collision_shape.tres")
 const FIREBALL_SCENE = preload("res://Scenes/fireball.tscn")
+
 # References
+# cached references to child nodes (for performance and cleaner code).
 @onready var animated_sprite_2d = $AnimatedSprite2D as PlayerAnimatedSprite
 @onready var area_2d = $Area2D
 @onready var area_collision_shape = $Area2D/AreaCollisionShape
@@ -64,7 +70,7 @@ func _physics_process(delta):
 	
 	var camera_left_bound = camera_sync.global_position.x - camera_sync.get_viewport_rect().size.x / 2 / camera_sync.zoom.x
 	
-	# Apply gravity
+	# Apply gravity if player is not on floor/ground
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
