@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://8x3uh3nc4ohe"]
+
+[ext_resource type="Script" uid="uid://dcs6vf7yangkr" path="res://bgm_player.gd" id="2_yfopc"]
+
+[node name="Main" type="Node"]
+script = ExtResource("2_yfopc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

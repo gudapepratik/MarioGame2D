@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneData="*res://Scripts/scene_data.gd"
+Music="*res://bgm_player.tscn"
 
 [display]
 

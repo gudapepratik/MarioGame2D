@@ -7,36 +7,28 @@
 [ext_resource type="PackedScene" uid="uid://dl1yh0nllbjk5" path="res://Scenes/player.tscn" id="5_tcbop"]
 [ext_resource type="PackedScene" uid="uid://4fe6usbjj45w" path="res://Scenes/pipe_connector.tscn" id="6_j8xfi"]
 [ext_resource type="PackedScene" uid="uid://bei1c0pe6xtcd" path="res://Scenes/pipe.tscn" id="7_4lvpc"]
-[ext_resource type="Script" path="res://Scripts/level_manager.gd" id="8_ombec"]
+[ext_resource type="Script" uid="uid://ij0q1bawjqh0" path="res://Scripts/level_manager.gd" id="8_ombec"]
 [ext_resource type="PackedScene" uid="uid://bpy3r3x21vpnj" path="res://Scenes/collectable_coin.tscn" id="9_5yoxh"]
 [ext_resource type="PackedScene" uid="uid://njy08hqpoa5r" path="res://Scenes/ui.tscn" id="10_f1las"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o42n"]
 texture = ExtResource("1_gvf36")
 0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iu1ev"]
 texture = ExtResource("2_7r2rl")
 0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7puut"]
 texture = ExtResource("3_1yc4x")
 0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ya33d"]
 texture = ExtResource("4_mf7t0")
 0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_v6gpn"]

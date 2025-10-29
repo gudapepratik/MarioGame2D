@@ -227,7 +227,13 @@ func switch_to_underground():
 	var level_manager = get_tree().get_first_node_in_group("level_manager")
 	SceneData.player_mode = player_mode
 	SceneData.coins = level_manager.coins
-	SceneData.points = level_manager.points 
+	SceneData.points = level_manager.points
+	 
+	if Music.has_method("stop_music"):
+		Music.stop_music()
+	if Music.has_method("play_underground"):
+		Music.play_underground()
+		
 	get_tree().change_scene_to_file("res://Scenes/underground.tscn")
 	
 	
@@ -243,6 +249,12 @@ func switch_to_main():
 	SceneData.player_mode = player_mode
 	SceneData.coins = level_manager.coins
 	SceneData.points = level_manager.points 
+	
+	if Music.has_method("stop_music"):
+		Music.stop_music()
+	if Music.has_method("play_main"):
+		Music.play_main()
+		
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func on_pole_hit():
